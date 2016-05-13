@@ -38,10 +38,13 @@
 League
   name: text
   prize: integer
+  commissioner_id: integer
 
 Team
   name: text
+  rank: integer
   user_id: integer
+  league_id: integer
 
 Player
   name: text
@@ -50,11 +53,9 @@ Player
   ppg: integer
   salary: integer
 
-Standing
-  league_id: integer
+Roster
   team_id: integer
   player_id: integer
-  rank: integer
 
 User
   username: text
