@@ -1,0 +1,5 @@
+<ul>
+  <% @leagues.each do |league| %>
+    <li><%= link_to league.name, "/leagues/#{league.id}" %></li>
+  <% end %>
+</ul>

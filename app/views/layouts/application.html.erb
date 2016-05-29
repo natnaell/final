@@ -7,6 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="background"></div>
+  <nav>
+    <ul>
+      <li><%= link_to "Leagues", leagues_path %></li>
+      <li><%= link_to "Teams", teams_path %></li>
+      <li><%= link_to "Players", players_path %></li>
+    </ul>
+    <ul class="nav-right">
+      <% puts session["user_id"]%>
+      <% if session["user_id"].present? %>
+        <% current_user = User.find_by(id: session["user_id"]) %>
+        <li><%= "Hello " +current_user.username %></li>
+        <li><%= link_to "View Your Teams", user_path(current_user) %>!</li>
+        <li><%= link_to "Sign Out", logout_path %></li>
+      <% else %>
+        <li><%= link_to "Sign Up", new_user_path %></li>
+        <li><%= link_to "Sign In", login_path %></li>
+      <% end %>
+    </ul>
+  </nav>
+
+
 
 <%= yield %>
 

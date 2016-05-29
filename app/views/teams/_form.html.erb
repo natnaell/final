@@ -1,0 +1,14 @@
+
+<%= form_for @team do |form| %>
+
+  <p><%= form.label :name %>
+  <br>
+  <%= form.text_field :name, size: 80, autofocus: true, required: true %></p>
+
+  <p><%= form.label :league_id, "League" %>
+  <br>
+  <%= form.collection_select :league_id, League.all.order('name'), :id, :name %></p>
+  
+
+  <%= form.submit %>
+<% end %>

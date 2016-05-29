@@ -13,4 +13,40 @@
 
 ActiveRecord::Schema.define(version: 0) do
 
+  create_table "leagues", force: :cascade do |t|
+    t.text    "name"
+    t.integer "prize"
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.text    "name"
+    t.text    "image_url"
+    t.text    "position"
+    t.integer "ppg"
+    t.integer "fg"
+  end
+
+  create_table "rosters", force: :cascade do |t|
+    t.integer "team_id"
+    t.integer "player_id"
+  end
+
+  add_index "rosters", ["player_id"], name: "index_rosters_on_player_id"
+  add_index "rosters", ["team_id"], name: "index_rosters_on_team_id"
+
+  create_table "teams", force: :cascade do |t|
+    t.text    "name"
+    t.integer "rank"
+    t.integer "user_id"
+    t.integer "league_id"
+  end
+
+  add_index "teams", ["league_id"], name: "index_teams_on_league_id"
+  add_index "teams", ["user_id"], name: "index_teams_on_user_id"
+
+  create_table "users", force: :cascade do |t|
+    t.text "username"
+    t.text "password_digest"
+  end
+
 end

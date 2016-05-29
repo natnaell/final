@@ -1,0 +1,11 @@
+<h1><%= @league.name %></h1>
+
+<%= link_to "Add a new team","/teams/new" %>
+
+<h3>Teams</h3>
+
+<ul>
+  <% @league.teams.each do |team| %>
+    <li><%= link_to team.name, "/teams/#{team.id}" %></li>
+  <% end %>
+</ul>

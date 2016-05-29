@@ -1,0 +1,15 @@
+<h1>Draft A Player</h1>
+<% if @user_id == session[:user_id].to_i %>
+
+  <%= form_tag "/rosters/"+params[:team_id].to_s, :method => :post do %>
+
+    <%= collection_select :p_id, :player_id, Player.all.order('name'), :id, :name %></p>
+
+    <p><%= submit_tag "Draft!" %></p>
+  <% end %>
+
+<% else %>
+
+<h3>Stop trying to mess with other people's teams.</h3>
+
+<% end %>

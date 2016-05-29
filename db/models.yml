@@ -38,7 +38,6 @@
 League
   name: text
   prize: integer
-  commissioner_id: integer
 
 Team
   name: text
@@ -51,7 +50,7 @@ Player
   image_url: text
   position: text
   ppg: integer
-  salary: integer
+  fg: integer
 
 Roster
   team_id: integer
@@ -59,4 +58,4 @@ Roster
 
 User
   username: text
-  password: text
+  password_digest: text

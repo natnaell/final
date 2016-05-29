@@ -1,0 +1,10 @@
+<h2>Edit <%= @team.name %></h2>
+
+<% if @team.user_id == session[:user_id].to_i %>
+
+<%= render 'form' %>
+
+<% else %>
+
+<h3>Stop trying to mess with other people's teams.</h3>
+<% end %>

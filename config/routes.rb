@@ -53,4 +53,18 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  root 'leagues#index'
+
+  resources :leagues
+  #get '/teams/:id' => 'teams#show'
+  resources :teams
+  resources :players
+  resources :users
+  get '/rosters/:team_id' => 'rosters#new'
+  post '/rosters/:team_id' => 'rosters#create'
+
+  get '/login' => 'sessions#new'
+  post '/sessions' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
 end

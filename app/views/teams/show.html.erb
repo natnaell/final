@@ -1,0 +1,14 @@
+<h1><%= @team.name %></h1>
+
+<%= link_to "Draft A Player", "/rosters/#{@team.id}" %>
+<br></br>
+<%= link_to "Edit Team", edit_team_path(@team.id) %>
+<br></br>
+<%= link_to "Delete Team", team_path(@team.id), :method => :delete %>
+<h3>Players</h3>
+
+<ul>
+  <% @team.rosters.each do |roster| %>
+    <li><%= link_to roster.player.name, "/players/#{roster.player.id}" %></li>
+  <% end %>
+</ul>

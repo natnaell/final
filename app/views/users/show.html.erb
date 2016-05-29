@@ -1,0 +1,9 @@
+<h1><%= @user.username %></h1>
+
+<h3>Your Teams</h3>
+
+<ul>
+  <% @user.teams.each do |team| %>
+    <li><%= link_to team.name, "/teams/#{team.id}" %></li>
+  <% end %>
+</ul>
