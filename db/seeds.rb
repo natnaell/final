@@ -49,15 +49,23 @@ fem.save
 
 curry = Player.new
 curry.name = "Stephen Curry"
-curry.image_url = "curry.jpg"
+curry.image_url = "curry.png"
 curry.position = "PG"
 curry.ppg = 30
 curry.fg = 52
 curry.save
 
+klay = Player.new
+klay.name = "Klay Thompson"
+klay.image_url = "klay.png"
+klay.position = "SG"
+klay.ppg = 26
+klay.fg = 48
+klay.save
+
 westbrook = Player.new
 westbrook.name = "Russell Westbrook"
-westbrook.image_url = "westbrook.jpg"
+westbrook.image_url = "westbrook.png"
 westbrook.position = "PG"
 westbrook.ppg = 26
 westbrook.fg = 48
@@ -65,7 +73,7 @@ westbrook.save
 
 lebron = Player.new
 lebron.name = "LeBron James"
-lebron.image_url = "lebron.jpg"
+lebron.image_url = "lebron.png"
 lebron.position = "SF"
 lebron.ppg = 26
 lebron.fg = 47
@@ -73,7 +81,7 @@ lebron.save
 
 durant = Player.new
 durant.name = "Kevin Durant"
-durant.image_url = "durant.jpg"
+durant.image_url = "durant.png"
 durant.position = "SF"
 durant.ppg = 28
 durant.fg = 48
@@ -81,7 +89,7 @@ durant.save
 
 cousins = Player.new
 cousins.name = "DeMarcus Cousins"
-cousins.image_url = "cousins.jpg"
+cousins.image_url = "cousins.png"
 cousins.position = "C"
 cousins.ppg = 26
 cousins.fg = 51
@@ -89,7 +97,7 @@ cousins.save
 
 davis = Player.new
 davis.name = "Anthony Davis"
-davis.image_url = "davis.jpg"
+davis.image_url = "davis.png"
 davis.position = "C"
 davis.ppg = 23
 davis.fg = 54
@@ -113,6 +121,7 @@ swoopes.save
 
 Roster.create(:team_id => small.id,:player_id => curry.id)
 Roster.create(:team_id => small.id,:player_id => westbrook.id)
+Roster.create(:team_id => small.id,:player_id => klay.id)
 Roster.create(:team_id => big.id,:player_id => lebron.id)
 Roster.create(:team_id => big.id,:player_id => durant.id)
 Roster.create(:team_id => huge.id,:player_id => cousins.id)

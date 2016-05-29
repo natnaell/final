@@ -1,10 +1,11 @@
 <h3><%= @player.name %></h3>
 
+<p><%= image_tag @player.image_url, class: 'pull-right' %></p>
 
 <ul>
  
     <li><%= 'Position: '+@player.position %></li>
-    <li>PPG <%= @player.ppg %></li>
+    <li>PPG: <%= @player.ppg %>.0</li>
     <li><%= @player.fg %>%</li>
 
 </ul>
