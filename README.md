@@ -21,3 +21,6 @@ Joins the Team and Player resources
 User profile. Each user can have multiple teams but only one per league
 Many to Many Relationship with League
 One to Many Relationship with Team
+
+Available at: 
+https://fathomless-ridge-18022.herokuapp.com
