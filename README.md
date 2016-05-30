@@ -1,3 +1,8 @@
+##Overview
+This web application coordinates basketball fantasy leagues that users can compete in. Each user can create as many teams as he/she likes and draft players. Users are only able to edit their own teams by drafting. The web app is deployed using heroku.
+Available at:
+https://fathomless-ridge-18022.herokuapp.com
+
 ## Resources
 
 ###League
@@ -21,6 +26,3 @@ Joins the Team and Player resources
 User profile. Each user can have multiple teams but only one per league
 Many to Many Relationship with League
 One to Many Relationship with Team
-
-Available at: 
-https://fathomless-ridge-18022.herokuapp.com
