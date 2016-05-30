@@ -12,7 +12,11 @@ class TeamsController < ApplicationController
   end
 
   def new
-    @team = Team.new
+    if session["user_id"].present?
+      @team = Team.new
+    else
+      redirect_to login_path
+    end
   end
 
   def create
